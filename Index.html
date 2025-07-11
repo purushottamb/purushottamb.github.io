@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Purushottam Bhandare - Computational Social Science</title>
+    <style>
+        /* --- Google Fonts --- */
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+        /* --- CSS Variables for Easy Customization --- */
+        :root {
+            --primary-font: 'Lora', serif;
+            --secondary-font: 'Source Sans 3', sans-serif;
+            --text-color: #333;
+            --heading-color: #1a1a1a;
+            --background-color: #f8f9fa;
+            --accent-color: #0056b3;
+            --border-color: #dee2e6;
+            --container-width: 850px;
+        }
+
+        /* --- General Reset & Body Styling --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--primary-font);
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        /* --- Main Layout Container --- */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header & Navigation --- */
+        .site-header {
+            background-color: #ffffff;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .site-header h1 {
+            font-family: var(--secondary-font);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .site-header p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-bottom: 1.5rem;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .main-nav a {
+            font-family: var(--secondary-font);
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: 600;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            border-bottom-color: var(--accent-color);
+        }
+        
+        /* --- Main Content & Sections --- */
+        main {
+            padding: 3rem 0;
+        }
+
+        .content-section {
+            background: #ffffff;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .content-section h2 {
+            font-family: var(--secondary-font);
+            font-size: 1.8rem;
+            color: var(--heading-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* --- About Me Section --- */
+        .about-me {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .about-me img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--border-color);
+        }
+
+        .about-me-text p {
+            margin-bottom: 1rem;
+        }
+        
+        /* --- Publications List --- */
+        .publication-list {
+            list-style: none;
+        }
+
+        .publication-list li {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--border-color);
+        }
+        
+        .publication-list .title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--heading-color);
+        }
+        
+        .publication-list .authors {
+            display: block;
+            margin-top: 0.25rem;
+        }
+
+        .publication-list .journal {
+            display: block;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .publication-list .links {
+            margin-top: 0.5rem;
+        }
+
+        .publication-list .links a {
+            font-family: var(--secondary-font);
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-right: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .publication-list .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        
+        .site-footer .social-links a {
+            margin: 0 10px;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+        
+        .site-footer .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .site-header h1 {
+                font-size: 2rem;
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .about-me {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .about-me img {
+                margin-bottom: 1rem;
+            }
+
+            .content-section {
+                padding: 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Name, Title, and Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <h1>Dr. Purushottam Bhandare</h1>
+            <p>Social Science Researcher</p>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about" class="active">About Me</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="cv.pdf" target="_blank">CV</a></li> <!-- Link to your CV PDF -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container">
+
+        <!-- About Me Section -->
+        <section id="about" class="content-section">
+            <div class="about-me">
+                <img src="https://placehold.co/300x300/EFEFEF/333333?text=E.V." alt="Profile picture of Dr. Eleanor Vance">
+                <div class="about-me-text">
+                    <h2>About Me</h2>
+                    <p>
+                        I am an Associate Professor in the Department of Sociology at the University of Metropolis. My research leverages computational methods to explore complex social phenomena, with a particular focus on social network analysis, the diffusion of information, and the dynamics of online communities.
+                    </p>
+                    <p>
+                        I received my Ph.D. in Sociology from Northern State University and completed a postdoctoral fellowship at the Center for Advanced Digital Research. My work aims to bridge the gap between traditional sociological theory and modern data science techniques.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Interests Section -->
+        <section id="research" class="content-section">
+            <h2>Research Interests</h2>
+            <ul>
+                <li>Computational Social Science</li>
+                <li>Social Network Analysis & Theory</li>
+                <li>Misinformation and Online Discourse</li>
+                <li>Sociology of Knowledge</li>
+                <li>Quantitative and Mixed Methods</li>
+            </ul>
+        </section>
+
+        <!-- Selected Publications Section -->
+        <section id="publications" class="content-section">
+            <h2>Selected Publications</h2>
+            <ul class="publication-list">
+                <li>
+                    <p class="title">"Echo Chambers and Filter Bubbles: The Structural Dynamics of Online Information."</p>
+                    <span class="authors">Vance, E., & Chen, L. (2024).</span>
+                    <span class="journal">Journal of Computational Sociology, 45(2), 112-130.</span>
+                    <div class="links">
+                        <a href="#" target="_blank">[Journal]</a>
+                        <a href="#" target="_blank">[PDF]</a>
+                        <a href="#" target="_blank">[Data/Code]</a>
+                    </div>
+                </li>
+                <li>
+                    <p class="title">"The Network Structure of Scientific Collaboration."</p>
+                    <span class="authors">Vance, E. (2023).</span>
+                    <span class="journal">Annual Review of Social Theory, 12, 34-50.</span>
+                    <div class="links">
+                        <a href="#" target="_blank">[Journal]</a>
+                        <a href="#" target="_blank">[PDF]</a>
+                    </div>
+                </li>
+                <li>
+                    <p class="title">"Mapping Ideological Divides on Social Media."</p>
+                    <span class="authors">Schmidt, B., & Vance, E. (2022).</span>
+                    <span class="journal">Proceedings of the International Conference on Web and Social Media (ICWSM).</span>
+                    <div class="links">
+                        <a href="#" target="_blank">[Journal]</a>
+                        <a href="#" target="_blank">[PDF]</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer Section with Contact Info -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                Dr. Eleanor Vance<br>
+                Department of Sociology, University of Metropolis<br>
+                123 University Avenue, Metropolis, USA 12345
+            </p>
+            <div class="social-links">
+                <a href="mailto:your.email@university.edu">Email</a> &bull;
+                <a href="#">Google Scholar</a> &bull;
+                <a href="#">Twitter/X</a> &bull;
+                <a href="#">LinkedIn</a>
+            </div>
+            <p>&copy; 2024 Dr. Eleanor Vance. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
