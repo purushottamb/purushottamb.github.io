@@ -354,7 +354,11 @@
     </section>
 
     </main>
-
+    <script>
+        window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+        };
+    </script>
     <!-- Footer Section with Contact Info -->
     <footer class="site-footer">
         <div class="container">
@@ -370,11 +374,6 @@
             </div>
             <p>&copy; 2024 Dr. Purushottam Bhandare. All rights reserved.</p>
         </div>
-    </footer>
-    <script>
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
-</script>
+    </footer>   
 </body>
 </html>
