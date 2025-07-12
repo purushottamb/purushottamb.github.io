@@ -2,13 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Dr. Purushottam Bhandare - Curriculum Vitae</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Dr. Eleanor Vance</title>
     <style>
-        /* --- Google Fonts --- */
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap');
-
-        /* --- CSS Variables for Easy Customization --- */
         :root {
             --primary-font: 'Lora', serif;
             --secondary-font: 'Source Sans 3', sans-serif;
@@ -19,36 +16,28 @@
             --border-color: #dee2e6;
             --container-width: 850px;
         }
-
-        /* --- General Reset & Body Styling --- */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
         body {
             font-family: var(--primary-font);
             line-height: 1.7;
             color: var(--text-color);
             background-color: var(--background-color);
         }
-
-        /* --- Main Layout Container --- */
         .container {
             max-width: var(--container-width);
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        /* --- Header & Navigation (Consistent with main page) --- */
         .site-header {
             background-color: #ffffff;
             padding: 2rem 0;
             border-bottom: 1px solid var(--border-color);
             text-align: center;
         }
-
         .site-header h1 {
             font-family: var(--secondary-font);
             font-size: 2.5rem;
@@ -56,20 +45,17 @@
             color: var(--heading-color);
             margin-bottom: 0.25rem;
         }
-
         .site-header p {
             font-size: 1.1rem;
             color: #6c757d;
             margin-bottom: 1.5rem;
         }
-
         .main-nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
             gap: 25px;
         }
-
         .main-nav a {
             font-family: var(--secondary-font);
             text-decoration: none;
@@ -79,96 +65,83 @@
             border-bottom: 2px solid transparent;
             transition: border-color 0.3s ease;
         }
-
-        .main-nav a:hover {
+        .main-nav a:hover, .main-nav a.active {
             border-bottom-color: var(--accent-color);
         }
-        
-        /* --- Main Content & Sections --- */
         main {
             padding: 3rem 0;
         }
-
-        .content-section {
-            background: #ffffff;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
+        .cv-embed {
+            display: flex;
+            justify-content: center;
+        }
+        .cv-embed iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 1000px;
+            border: 1px solid #dee2e6;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            background: #fff;
         }
-
-        .content-section h2 {
-            font-family: var(--secondary-font);
-            font-size: 1.8rem;
-            color: var(--heading-color);
-            margin-bottom: 1.5rem;
-        }
-        
-        /* --- CV Embed Styling --- */
-        .cv-embed-container {
-            position: relative;
-            width: 100%;
-            height: 800px; /* Default height, can be adjusted */
-            border: 1px solid var(--border-color);
-        }
-
-        .cv-embed-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* --- Footer --- */
-        .site-footer {
+        .back-link {
+            display: block;
             text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.9rem;
-            color: #6c757d;
+            margin-top: 2rem;
+            font-family: var(--secondary-font);
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 900px) {
+            .cv-embed iframe {
+                height: 600px;
+            }
+        }
+        @media (max-width: 600px) {
+            .cv-embed iframe {
+                height: 400px;
+            }
+            .site-header h1 {
+                font-size: 2rem;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
         }
     </style>
 </head>
 <body>
-
-    <!-- Header Section (Same as your main page for consistency) -->
+    <!-- Header Section (copied from index.html) -->
     <header class="site-header">
         <div class="container">
-            <h1>Dr. Eleanor Vance</h1>
-            <p>Associate Professor, Department of Sociology</p>
+            <h1>Dr. Purushottam Bhandare</h1>
+            <p>Social Science Researcher</p>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html#about">About Me</a></li>
+                    <li><a href="index.html">About Me</a></li>
                     <li><a href="index.html#research">Research</a></li>
                     <li><a href="index.html#publications">Publications</a></li>
-                    <li><a href="cv.html">CV</a></li> 
+                    <li><a href="cv.html" class="active">CV</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content Area for the CV -->
+    <!-- Main Content Area -->
     <main class="container">
-        <section id="cv" class="content-section">
-            <h2>Curriculum Vitae</h2>
-            <div class="cv-embed-container">
-                <!-- 
-                  STEP 1: Go to Box.com and get the embed code for your PDF.
-                  STEP 2: Paste the entire <iframe> code you copied from Box.com right below this comment.
-                -->
-                <p style="padding: 20px; text-align:center;">Your CV will be displayed here. Please follow the steps to embed it from Box.com.</p>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Section (Same as your main page) -->
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2024 Dr. Eleanor Vance. All rights reserved.</p>
+        <h2>Curriculum Vitae</h2>
+        <div class="cv-embed">
+            <!-- Replace the src URL below with your actual Box.com embed link -->
+            <iframe src="https://app.box.com/embed/s/your-box-file-id-here?view=fit" allowfullscreen webkitallowfullscreen msallowfullscreen></iframe>
         </div>
-    </footer>
-
+        <p style="text-align:center; margin-top:1rem;">
+            <a href="https://app.box.com/s/6uxmvztzgv72pljtn0dg1zxojklaxuvg" target="_blank" rel="noopener">Download CV (PDF)</a>
+        </p>
+        <a class="back-link" href="index.html">&larr; Back to Home</a>
+    </main>
 </body>
 </html>
