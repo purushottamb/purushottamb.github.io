@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Purushottam Bhandare - Computational Social Science</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-font: 'Lora', serif;
+            --secondary-font: 'Source Sans 3', sans-serif;
+            --text-color: #333;
+            --heading-color: #1a1a1a;
+            --background-color: #f8f9fa;
+            --accent-color: #0056b3;
+            --border-color: #dee2e6;
+            --container-width: 850px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--primary-font);
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .site-header h1 {
+            font-family: var(--secondary-font);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .site-header p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-bottom: 1.5rem;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .main-nav a {
+            font-family: var(--secondary-font);
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: 600;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            border-bottom-color: var(--accent-color);
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .content-section {
+            background: #ffffff;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .content-section h2 {
+            font-family: var(--secondary-font);
+            font-size: 1.8rem;
+            color: var(--heading-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .about-me {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .about-me img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--border-color);
+        }
+
+        .about-me-text p {
+            margin-bottom: 1rem;
+        }
+
+        .publication-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .publication-list li {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--border-color);
+        }
+
+        .publication-list .title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--heading-color);
+        }
+
+        .publication-list .authors {
+            display: block;
+            margin-top: 0.25rem;
+        }
+
+        .publication-list .journal {
+            display: block;
+            font-style: italic;
+            color: #555;
+        }
+
+        .publication-list .links {
+            margin-top: 0.5rem;
+        }
+
+        .publication-list .links a {
+            font-family: var(--secondary-font);
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-right: 15px;
+            font-size: 0.9rem;
+        }
+
+        .publication-list .links a:hover {
+            text-decoration: underline;
+        }
+
+        .site-footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .site-footer .social-links a {
+            margin: 0 10px;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .site-footer .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .site-header h1 {
+                font-size: 2rem;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .about-me {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .about-me img {
+                margin-bottom: 1rem;
+            }
+            .content-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Name, Title, and Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <h1>Dr. Purushottam Bhandare</h1>
+            <p>Social Science Researcher</p>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about" class="active">About Me</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="cv.pdf" target="_blank">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container">
+
+        <!-- About Me Section -->
+        <section id="about" class="content-section">
+            <div class="about-me">
+                <img src="https://lh5.googleusercontent.com/z083FkFNfxMPvQlJqyeFa3fheuP1I7UrGm4kBfSqtnYfEOWsGiZSEJXo4mRTKj2efS-L3QqQCLxUdDKpLsbeNJVeKsHBabzWPwUBrBp2hA92q_bTQa8zHbYQJ9tRKl7KKlLY9S6Qyu-5J0-Xl5kiBN9NXhDScv_KvmQMXeVnB6LXknPa-Lir0w=w1280" alt="Profile picture of Dr. Purushottam Bhandare">
+                <div class="about-me-text">
+                    <h2>About Dr Purushottam</h2>
+                    <p>
+                        Dr Purushottam Bhandare is a policy researcher and data analyst specializing in public policy, financial inclusion, and social entrepreneurship. With a Ph.D. in Management and Labor Studies from the Tata Institute of Social Sciences and an MA in Public Policy from the University of Chicago, Purushottam brings a unique blend of academic rigor and practical experience to his work.
+                    </p>
+
+                    <p>
+                        His research interests span public policy, education, inequality, financial inclusion, behavioral science, technology, healthcare, climate change, and sustainable development goals. Purushottam has authored multiple peer-reviewed articles and presented his findings at international conferences, contributing significantly to the fields of financial literacy and social entrepreneurship.                    
+                    </p>
+
+                    <p>
+                        With experience ranging from leading quantitative research studies to analyzing complex datasets, Purushottam excels in translating data into actionable policy recommendations. His work has impacted various sectors, including banking, urban development, and social welfare.
+                    </p>
+
+                    <p>
+                        Currently serving as a Senior Peace Fellow at the Peace Economy Project, Purushottam continues to leverage his analytical skills and interdisciplinary background to drive positive change through effective policy solutions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Interests Section -->
+        <section id="research" class="content-section">
+            <h2>Research Interests</h2>
+            <ul>
+                <li>Computational Social Science</li>
+                <li>Social Network Analysis & Theory</li>
+                <li>Misinformation and Online Discourse</li>
+                <li>Sociology of Knowledge</li>
+                <li>Quantitative and Mixed Methods</li>
+            </ul>
+        </section>
+
+        <!-- Selected Publications Section -->
+    <section id="publications" class="content-section">
+    <h2>Selected Publications</h2>
+
+    <!-- Peer Reviewed Journal Articles Subsection -->
+    <h3>Peer Reviewed Journal Articles</h3>
+    <ul class="publication-list">
+        <li>
+            <p class="title">"Financial Inclusion and Financial Literacy Programs for Low- Income Section in India."</p>
+            <span class="authors">Bhandare, P. V., & Guha, S. (2024).</span>
+            <span class="journal">International Journal of Business and Globalisation, 37(3), 424-445.</span>
+            <div class="links">
+                <a href="https://doi.org/10.1504/IJBG.2024.139823" target="_blank">[Journal]</a>
+                <a href="https://doi.org/10.1504/IJBG.2024.139823" target="_blank">[PDF]</a>
+                <a href="https://doi.org/10.1504/IJBG.2024.139823" target="_blank">[Data/Code]</a>
+            </div>
+        </li>
+        <li>
+            <p class="title">"Impact of Financial literacy models on the Financial behavior of individuals: An empirical study on the Indian context."</p>
+            <span class="authors">Bhandare, P. V., Guha, S., Chaudhury, R. H., and Ghosh, C. (2021).</span>
+            <span class="journal">Strategic Change, 30(4), 377-387.</span>
+            <div class="links">
+                <a href="https://doi.org/10.1002/jsc.2431" target="_blank">[Journal]</a>
+                <a href="https://doi.org/10.1002/jsc.2431" target="_blank">[PDF]</a>
+            </div>
+        </li>
+        <li>
+            <p class="title">"Skill Development and Care Giving: Future Scope of Employment in Elder Care Sector."</p>
+            <span class="authors">Pednekar G. H., Bhandare P. V. (2018).</span>
+            <span class="journal">Journal of Society for Promotion of Excellence in Electronics Discipline (SPEED), 5(1), 21-30.</span>
+            <div class="links">
+                <a href="https://www.excellentspeed.org/SPEED_online_JRE_Volume_V_Issue_1Skill_conf_27-10.pdf" target="_blank">[Journal]</a>
+                <a href="https://www.excellentspeed.org/SPEED_online_JRE_Volume_V_Issue_1Skill_conf_27-10.pdf" target="_blank">[PDF]</a>
+            </div>
+        </li>
+    </ul>
+
+    <!-- Book Chapters Subsection -->
+    <h3>Book Chapters</h3>
+    <ul class="publication-list">
+        <li>
+            <p class="title">"Financial Stability of Microfinance Institutions in the post-Global Financial Crisis: A Case of South Asia."</p>
+            <span class="authors">Bhandare, P. (2022).</span>
+            <span class="journal">In S. Gupta (Ed.), Advances in Computational Sociology. Metropolis Press.</span>
+            <div class="links">
+                <a href="#" target="_blank">[Publisher]</a>
+                <a href="#" target="_blank">[PDF]</a>
+            </div>
+        </li>
+        <!-- Add more book chapters as needed -->
+        <li>
+            <p class="title">"Digital Networks and Social Change."</p>
+            <span class="authors">Guha, S., Ghosh, C. and Bhandare, P. V. (2025).</span>
+            <span class="journal">In Yamahata, C., and Takeda, M. (eds.) (2025). Youth, Community, and Democracy in India, Myanmar, and Thailand. Palgrave Macmillan, Singapore.</span>
+            <div class="links">
+                <a href="https://doi.org/10.1007/978-981-97-6378-8_9" target="_blank">[Publisher]</a>
+                <a href="https://doi.org/10.1007/978-981-97-6378-8_9" target="_blank">[PDF]</a>
+            </div>
+        </li>
+            
+        <li>
+            <p class="title">"Perspective Shift in Land Acquisition Policies and Its Impact on the Urban Development of Navi Mumbai Region, India."</p>
+            <span class="authors">Pednekar, G. H., Bhandare, P. V., Sharma, R. (2024).</span>
+            <span class="journal">In: Anand, S., Nagarale, V., Abhay, R.K. (eds) Emerging Geosustainability Transformations in India. Advances in Geographical and Environmental Sciences. Springer, Singapore.</span>
+            <div class="links">
+                <a href="https://link.springer.com/chapter/10.1007/978-981-97-7993-2_4" target="_blank">[Publisher]</a>
+                <a href="https://link.springer.com/chapter/10.1007/978-981-97-7993-2_4" target="_blank">[PDF]</a>
+            </div>
+        </li>
+        
+        <li>
+            <p class="title">"Exploring Social Finance as a Process for Value Creation in Social Entrepreneurship."</p>
+            <span class="authors">Bhandare, P. V., Guha, S. (2024).</span>
+            <span class="journal">In Reji E. M. and Majumdar S. (eds.) (2024). Social Enterprise Value and Processes: Entrepreneurship Studies from India. Springer, Singapore.</span>
+            <div class="links">
+                <a href="https://link.springer.com/chapter/10.1007/978-981-97-3252-4_4" target="_blank">[Publisher]</a>
+                <a href="https://link.springer.com/chapter/10.1007/978-981-97-3252-4_4" target="_blank">[PDF]</a>
+            </div>
+        </li>
+
+        <li>
+            <p class="title">"Changing Landscapes of Travelling Cinema in Maharashtra, India."</p>
+            <span class="authors">Pednekar, G. H., Bhandare, P. V. (2022).</span>
+            <span class="journal">In Shaban, A., Vermeylen, F., and Handke, C. (eds.) (2022). Creative Industries in India (1st ed.) (pp. 243-260). Routledge India.</span>
+            <div class="links">
+                <a href="https://doi.org/10.4324/9781003129370-16" target="_blank">[Publisher]</a>
+                <a href="https://doi.org/10.4324/9781003129370-16" target="_blank">[PDF]</a>
+            </div>
+        </li>
+    </ul>
+    </section>
+
+    </main>
+
+    <!-- Footer Section with Contact Info -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                Dr. Purushottam Bhandare<br>
+                Department of Sociology, University of Metropolis<br>
+                123 University Avenue, Metropolis, USA 12345
+            </p>
+            <div class="social-links">
+                <a href="mailto:your.email@university.edu">Email</a> &bull;
+                <a href="#">Google Scholar</a> &bull;
+                <a href="#">Twitter/X</a> &bull;
+                <a href="#">LinkedIn</a>
+            </div>
+            <p>&copy; 2024 Dr. Purushottam Bhandare. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
