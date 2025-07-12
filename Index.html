@@ -397,9 +397,21 @@
             <p>&copy; 2024 Dr. Purushottam Bhandare. All rights reserved.</p>
         </div>
     </footer>   
-    <!-- Floating Up Arrow Button -->
-    <button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top">
-        &#8679;
-    </button>
+    <script>
+        // Show/hide the button on scroll
+        window.onscroll = function() {
+        const btn = document.getElementById("scrollToTopBtn");
+        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        btn.style.display = "block";
+        } else {
+        btn.style.display = "none";
+        }
+        };
+
+        // Scroll to top on click
+        document.getElementById("scrollToTopBtn").onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    </script>
 </body>
 </html>
